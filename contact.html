@@ -9,7 +9,8 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
     <style>
         .navbar-brand {
             color: white;
@@ -125,6 +126,7 @@
                     <br />
                     <textarea rows="5" name="message" id="message" placeholder="Your Message"
                         required></textarea><br /><br />
+                    <input type="hidden" name="redirect" value="https://easywaytours.github.io/main/thanks1.html">
                 </div>
                 <!-- Ensure this div has the correct class and data attributes for the captcha -->
                 <div class="h-captcha" data-captcha="true"></div>
@@ -175,11 +177,11 @@
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         const form = document.getElementById('feedback1');
-        
+
         form.addEventListener('submit', function (e) {
             // Update this selector to the correct one based on the captcha service you're using
             const hCaptchaResponse = document.querySelector('textarea[name="h-captcha-response"], input[name="h-captcha-response"]')?.value;
-            
+
             if (!hCaptchaResponse) {
                 e.preventDefault();
                 alert("Please complete the captcha.");
@@ -187,4 +189,5 @@
         });
     });
 </script>
+
 </html
